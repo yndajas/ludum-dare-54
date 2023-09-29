@@ -1,4 +1,32 @@
-[gd_scene format=3 uid="uid://275i0f2dku1u"]
+[gd_scene load_steps=6 format=3 uid="uid://275i0f2dku1u"]
+
+[ext_resource type="Texture2D" uid="uid://diytwa18q1sy0" path="res://player.png" id="1_xmrtm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmbuc"]
+atlas = ExtResource("1_xmrtm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5m5d"]
+atlas = ExtResource("1_xmrtm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yevyp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmbuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5m5d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d60yk"]
+radius = 13.0
+height = 26.0
 
 [node name="Level1" type="Node2D"]
 
@@ -8,3 +36,13 @@ offset_top = 126.0
 offset_right = 454.0
 offset_bottom = 166.0
 text = "This is level 1"
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(258, 188)
+sprite_frames = SubResource("SpriteFrames_yevyp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(258, 191)
+shape = SubResource("CapsuleShape2D_d60yk")
