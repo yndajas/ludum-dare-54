@@ -6,11 +6,11 @@
 script = ExtResource("1_roek3")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 270.0
 offset_top = 30.0
-offset_right = 370.0
+offset_right = 640.0
 offset_bottom = 53.0
-text = "This is a title"
+bbcode_enabled = true
+text = "[center]This is a title"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 offset_top = 278.0
