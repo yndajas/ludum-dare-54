@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://275i0f2dku1u"]
 
-[ext_resource type="Texture2D" uid="uid://diwlqqgf0gj8t" path="res://tilemap.png" id="1_qaky1"]
-[ext_resource type="FontFile" uid="uid://b8wld6j0s08ch" path="res://assets/fonts/PixelOperator8.ttf" id="1_sv30q"]
-[ext_resource type="Texture2D" uid="uid://diytwa18q1sy0" path="res://player.png" id="1_xmrtm"]
+[ext_resource type="FontFile" uid="uid://b8wld6j0s08ch" path="res://assets/fonts/PixelOperator8.ttf" id="1_hrp24"]
+[ext_resource type="Texture2D" uid="uid://diwlqqgf0gj8t" path="res://assets/images/sprites/tilemap.png" id="2_72y4e"]
+[ext_resource type="Texture2D" uid="uid://diytwa18q1sy0" path="res://assets/images/sprites/player.png" id="3_vc1mj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6p7uu"]
-texture = ExtResource("1_qaky1")
+texture = ExtResource("2_72y4e")
 separation = Vector2i(1, 1)
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
@@ -126,11 +126,11 @@ tile_size = Vector2i(18, 18)
 sources/0 = SubResource("TileSetAtlasSource_6p7uu")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fmbuc"]
-atlas = ExtResource("1_xmrtm")
+atlas = ExtResource("3_vc1mj")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b5m5d"]
-atlas = ExtResource("1_xmrtm")
+atlas = ExtResource("3_vc1mj")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yevyp"]
@@ -158,7 +158,7 @@ offset_left = 301.0
 offset_top = 126.0
 offset_right = 491.0
 offset_bottom = 166.0
-theme_override_fonts/normal_font = ExtResource("1_sv30q")
+theme_override_fonts/normal_font = ExtResource("1_hrp24")
 theme_override_font_sizes/normal_font_size = 16
 text = "This is level 1"
 
