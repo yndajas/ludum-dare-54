@@ -46,3 +46,4 @@
   - run (on input; use `move_toward` for accelaration; adjust existing `move_toward` to refine decelaration - divide final argument)
   - jump (on input)
 - Trigger run/jump animation frames (`$AnimatedSprite2D.play("run")` etc in physics process, and `$AnimatedSprite2D.flip_h = true` for left/right)
+- Get main menu working with controller/keyboard - auto-focus button
