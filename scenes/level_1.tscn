@@ -184,8 +184,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d60yk"]
-radius = 13.0
-height = 26.0
+height = 24.0
 
 [node name="Level1" type="Node2D"]
 
@@ -205,7 +204,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(983051, 65536, 0, 983052, 131072, 0, 983053, 131072, 0, 983054, 131072, 0, 983055, 131072, 0, 983056, 131072, 0, 983057, 131072, 0, 983058, 131072, 0, 983059, 131072, 0, 983060, 131072, 0, 983061, 131072, 0, 917526, 524288, 1, 983062, 131072, 3, 983063, 131072, 3, 917528, 589824, 1, 917527, 131072, 1, 983065, 131072, 0, 983066, 131072, 0, 983067, 131072, 0, 983068, 131072, 0, 983069, 196608, 0, 983064, 131072, 3)
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(24, 0)
+position = Vector2(23, -2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 position = Vector2(232, 256)
@@ -214,5 +213,5 @@ animation = &"idle"
 frame_progress = 0.93962
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(232, 259)
+position = Vector2(232, 260)
 shape = SubResource("CapsuleShape2D_d60yk")
