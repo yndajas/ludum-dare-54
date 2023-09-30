@@ -43,6 +43,9 @@ theme_override_colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
 theme_override_fonts/font = ExtResource("3_hfnik")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = ExtResource("4_ch5d2")
+theme_override_styles/hover = ExtResource("4_ch5d2")
+theme_override_styles/pressed = ExtResource("4_ch5d2")
+theme_override_styles/focus = ExtResource("4_ch5d2")
 text = "Start game"
 
 [connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
