@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://275i0f2dku1u"]
+[gd_scene load_steps=10 format=3 uid="uid://275i0f2dku1u"]
 
 [ext_resource type="Texture2D" uid="uid://diwlqqgf0gj8t" path="res://tilemap.png" id="1_qaky1"]
+[ext_resource type="FontFile" uid="uid://b8wld6j0s08ch" path="res://assets/fonts/PixelOperator8.ttf" id="1_sv30q"]
 [ext_resource type="Texture2D" uid="uid://diytwa18q1sy0" path="res://player.png" id="1_xmrtm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6p7uu"]
@@ -157,6 +158,7 @@ offset_left = 301.0
 offset_top = 126.0
 offset_right = 454.0
 offset_bottom = 166.0
+theme_override_fonts/normal_font = ExtResource("1_sv30q")
 text = "This is level 1"
 
 [node name="TileMap" type="TileMap" parent="."]

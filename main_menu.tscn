@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bp0k3cnbsvoac"]
+[gd_scene load_steps=5 format=3 uid="uid://bp0k3cnbsvoac"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_roek3"]
 [ext_resource type="Texture2D" uid="uid://boiq1w4ecdi4s" path="res://main_menu_background.png" id="2_p2sxn"]
+[ext_resource type="FontFile" uid="uid://b8wld6j0s08ch" path="res://assets/fonts/PixelOperator8.ttf" id="3_hfnik"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8f5ro"]
 bg_color = Color(0.843137, 0.482353, 0.729412, 1)
@@ -22,6 +23,7 @@ offset_top = 80.0
 offset_right = 640.0
 offset_bottom = 103.0
 theme_override_colors/default_color = Color(0.796078, 0.858824, 0.988235, 1)
+theme_override_fonts/normal_font = ExtResource("3_hfnik")
 bbcode_enabled = true
 text = "[center]This is a title"
 
@@ -31,8 +33,11 @@ offset_right = 640.0
 offset_bottom = 311.0
 theme_override_colors/default_color = Color(0.796078, 0.858824, 0.988235, 1)
 theme_override_font_sizes/normal_font_size = 14
+theme_override_fonts/normal_font = ExtResource("3_hfnik")
 bbcode_enabled = true
-text = "[center]Level assets from kenney.nl"
+text = "[center]Level assets from kenney.nl
+
+[center]Fonts by  Jayvee Enaguas"
 
 [node name="StartButton" type="Button" parent="."]
 offset_left = 260.0
@@ -41,6 +46,7 @@ offset_right = 380.0
 offset_bottom = 180.0
 theme_override_colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
 theme_override_font_sizes/font_size = 14
+theme_override_fonts/font = ExtResource("3_hfnik")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8f5ro")
 text = "Start game"
 
