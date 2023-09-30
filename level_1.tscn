@@ -121,6 +121,7 @@ texture_region_size = Vector2i(18, 18)
 15:6/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_wm8kc"]
+tile_size = Vector2i(18, 18)
 sources/0 = SubResource("TileSetAtlasSource_6p7uu")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fmbuc"]
@@ -160,6 +161,7 @@ text = "This is level 1"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_wm8kc")
+cell_quadrant_size = 18
 format = 2
 
 [node name="Player" type="CharacterBody2D" parent="."]
