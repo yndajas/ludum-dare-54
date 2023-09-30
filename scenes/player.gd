@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func get_direction() -> int:
-	return Input.get_axis("ui_left", "ui_right")
+	return Input.get_axis("move_left", "move_right")
 
 func set_animation() -> void:
 	if not is_on_floor():
@@ -26,7 +26,7 @@ func set_animation() -> void:
 func set_movement(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	elif Input.is_action_just_pressed("ui_accept"):
+	elif Input.is_action_just_pressed("jump"):
 		velocity.y = JUMP_VELOCITY
 
 	var direction := get_direction()
