@@ -6,10 +6,7 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8f5ro"]
 bg_color = Color(0.843137, 0.482353, 0.729412, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+corner_detail = 1
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_roek3")
