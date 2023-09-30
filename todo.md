@@ -1,7 +1,5 @@
 # To do
 
-- Add custom input (project settings, input map) and get it working with main menu and level 1 ("move_left", "move_right", "jump", "return_to_main_menu")
-- Add global return to menu function (project settings, autoload, add Global, add `_input` function with `if event.is_action_pressed("return_to_main_menu")`)
 - Add camera (camera2D attached to player; zoom 3 or so; add drag)
 - Add portal doors
   - area 2D with collison shape 2D and animated sprite 2D child nodes
@@ -47,3 +45,5 @@
   - jump (on input)
 - Trigger run/jump animation frames (`$AnimatedSprite2D.play("run")` etc in physics process, and `$AnimatedSprite2D.flip_h = true` for left/right)
 - Get main menu working with controller/keyboard - auto-focus button
+- Add custom input (project settings, input map) and get it working with main menu and level 1 ("move_left", "move_right", "jump", "return_to_main_menu")
+- Add global return to menu function (project settings, autoload, add Global, add `_input` function with `if event.is_action_pressed("return_to_main_menu")`)
