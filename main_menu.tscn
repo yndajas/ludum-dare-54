@@ -3,10 +3,7 @@
 [ext_resource type="Script" path="res://main_menu.gd" id="1_roek3"]
 [ext_resource type="Texture2D" uid="uid://boiq1w4ecdi4s" path="res://main_menu_background.png" id="2_p2sxn"]
 [ext_resource type="FontFile" uid="uid://b8wld6j0s08ch" path="res://assets/fonts/PixelOperator8.ttf" id="3_hfnik"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8f5ro"]
-bg_color = Color(0.843137, 0.482353, 0.729412, 1)
-corner_detail = 1
+[ext_resource type="StyleBox" uid="uid://ck5vn706myxwq" path="res://assets/styleboxes/main_menu_button.tres" id="4_ch5d2"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_roek3")
@@ -45,7 +42,7 @@ offset_bottom = 190.0
 theme_override_colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
 theme_override_fonts/font = ExtResource("3_hfnik")
 theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("StyleBoxFlat_8f5ro")
+theme_override_styles/normal = ExtResource("4_ch5d2")
 text = "Start game"
 
 [connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
