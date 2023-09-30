@@ -1,14 +1,8 @@
 # To do
 
-- Add basic physics (attach script to character body)
-  - gravity
-  - run (on input; use `move_toward` for accelaration; adjust existing `move_toward` to refine decelaration - divide final argument)
-  - jump (on input)
-- Trigger run animation frames (`$AnimatedSprite2D.play("run")` etc in physics process, and `$AnimatedSprite2D.flip_h = true` for left/right)
 - Add custom input (project settings, input map) and get it working with main menu and level 1 ("move_left", "move_right", "jump", "return_to_main_menu")
 - Add global return to menu function (project settings, autoload, add Global, add `_input` function with `if event.is_action_pressed("return_to_main_menu")`)
 - Add camera (camera2D attached to player; zoom 3 or so; add drag)
-- Connect player jump and idle animation frames
 - Add portal doors
   - area 2D with collison shape 2D and animated sprite 2D child nodes
   - body entered signal on area 2D
@@ -47,3 +41,8 @@
   - add physics layer to tilemap
   - on tileset tab at bottom, select tiles and in physics, reset to default tile shape
   - set some to one-way in polygon to allow jump through from below, but not dropping down from above
+- Add basic physics (attach script to character body)
+  - gravity
+  - run (on input; use `move_toward` for accelaration; adjust existing `move_toward` to refine decelaration - divide final argument)
+  - jump (on input)
+- Trigger run/jump animation frames (`$AnimatedSprite2D.play("run")` etc in physics process, and `$AnimatedSprite2D.flip_h = true` for left/right)
