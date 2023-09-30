@@ -5,14 +5,14 @@
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_roek3")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Title" type="RichTextLabel" parent="."]
 offset_top = 30.0
 offset_right = 640.0
 offset_bottom = 53.0
 bbcode_enabled = true
 text = "[center]This is a title"
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+[node name="Credits" type="RichTextLabel" parent="."]
 offset_top = 278.0
 offset_right = 640.0
 offset_bottom = 311.0
@@ -20,11 +20,11 @@ theme_override_font_sizes/normal_font_size = 14
 bbcode_enabled = true
 text = "[center]Level assets from kenney.nl"
 
-[node name="Button" type="Button" parent="."]
+[node name="StartButton" type="Button" parent="."]
 offset_left = 266.0
 offset_top = 102.0
 offset_right = 372.0
 offset_bottom = 193.0
 text = "Start game"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
