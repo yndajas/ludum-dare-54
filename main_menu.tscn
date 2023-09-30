@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bp0k3cnbsvoac"]
+[gd_scene load_steps=3 format=3 uid="uid://bp0k3cnbsvoac"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_roek3"]
+[ext_resource type="Texture2D" uid="uid://boiq1w4ecdi4s" path="res://main_menu_background.png" id="2_p2sxn"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_roek3")
+
+[node name="MainMenuBackground" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("2_p2sxn")
 
 [node name="Title" type="RichTextLabel" parent="."]
 offset_top = 80.0
