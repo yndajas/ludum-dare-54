@@ -1,9 +1,5 @@
 # To do
 
-- Add collision detection
-  - add physics layer to tilemap
-  - on tileset tab at bottom, select tiles and in physics, reset to default tile shape
-  - set some to one-way in polygon to allow jump through from below, but not dropping down from above
 - Add basic physics (attach script to character body)
   - gravity
   - run (on input; use `move_toward` for accelaration; adjust existing `move_toward` to refine decelaration - divide final argument)
@@ -47,3 +43,7 @@
 - Add custom player sprite with run animation frames
 - Add placeholder level assets from kenney.nl
 - Design player jump and idle animation frames
+- Add collision detection
+  - add physics layer to tilemap
+  - on tileset tab at bottom, select tiles and in physics, reset to default tile shape
+  - set some to one-way in polygon to allow jump through from below, but not dropping down from above
