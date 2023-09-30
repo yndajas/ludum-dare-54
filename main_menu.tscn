@@ -21,10 +21,11 @@ bbcode_enabled = true
 text = "[center]Level assets from kenney.nl"
 
 [node name="StartButton" type="Button" parent="."]
-offset_left = 266.0
-offset_top = 102.0
-offset_right = 372.0
-offset_bottom = 193.0
+offset_left = 260.0
+offset_top = 150.0
+offset_right = 380.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 14
 text = "Start game"
 
 [connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
