@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var jump_sounds: Array[AudioStreamMP3]
+
 const SPEED = 200.0
 const JUMP_VELOCITY = -350.0
 
@@ -46,4 +48,5 @@ func set_orientation() -> void:
 			$AnimatedSprite2D.flip_h = false
 
 func play_jump_sfx() -> void:
-	get_tree().get_nodes_in_group('jump_sounds').pick_random().play()
+	$JumpSfxPlayer.stream = jump_sounds.pick_random()
+	$JumpSfxPlayer.play()

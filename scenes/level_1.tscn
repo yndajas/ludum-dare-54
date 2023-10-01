@@ -494,6 +494,7 @@ position = Vector2(92, -360)
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(2.08165e-12, 2)
 script = ExtResource("3_bjlrj")
+jump_sounds = Array[AudioStreamMP3]([ExtResource("8_0mepk"), ExtResource("9_35nej"), ExtResource("9_j0p00"), ExtResource("8_sthwf")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 position = Vector2(2.08165e-12, 0)
@@ -510,17 +511,7 @@ zoom = Vector2(2, 2)
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
-[node name="Jump1" type="AudioStreamPlayer" parent="Player" groups=["jump_sounds"]]
-stream = ExtResource("8_0mepk")
-
-[node name="Jump2" type="AudioStreamPlayer" parent="Player" groups=["jump_sounds"]]
-stream = ExtResource("9_35nej")
-
-[node name="Jump3" type="AudioStreamPlayer" parent="Player" groups=["jump_sounds"]]
-stream = ExtResource("9_j0p00")
-
-[node name="Jump4" type="AudioStreamPlayer" parent="Player" groups=["jump_sounds"]]
-stream = ExtResource("8_sthwf")
+[node name="JumpSfxPlayer" type="AudioStreamPlayer" parent="Player"]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 volume_db = -20.0

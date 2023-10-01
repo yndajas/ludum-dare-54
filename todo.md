@@ -54,3 +54,4 @@
 - Add basic jump sound effect (randomly trigger silly jump sound)
 - Music
 - Music mute button/key
+- Refactor random jump trigger to use single audio player like music
