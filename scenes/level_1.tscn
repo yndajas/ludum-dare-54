@@ -9,10 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://c8k40aiaswddv" path="res://assets/images/sprites/player.png" id="3_vc1mj"]
 [ext_resource type="PackedScene" uid="uid://0r3qxg1aorwv" path="res://scenes/door.tscn" id="5_ubr64"]
 [ext_resource type="AudioStream" uid="uid://ddc530o7v6dx8" path="res://assets/audio/music/0008.wav" id="5_yrwdi"]
-[ext_resource type="AudioStream" uid="uid://842x4k4pka38" path="res://assets/audio/sfx/jump1.mp3" id="8_0mepk"]
-[ext_resource type="AudioStream" uid="uid://dhkw4ijpifhp6" path="res://assets/audio/sfx/jump4.mp3" id="8_sthwf"]
-[ext_resource type="AudioStream" uid="uid://crng8bsixd14f" path="res://assets/audio/sfx/jump2.mp3" id="9_35nej"]
-[ext_resource type="AudioStream" uid="uid://dk6ae1x6cdayf" path="res://assets/audio/sfx/jump3.mp3" id="9_j0p00"]
+[ext_resource type="AudioStream" uid="uid://842x4k4pka38" path="res://assets/audio/sfx/jump_1.mp3" id="10_1mgig"]
+[ext_resource type="AudioStream" uid="uid://crng8bsixd14f" path="res://assets/audio/sfx/jump_2.mp3" id="11_8gy5a"]
+[ext_resource type="AudioStream" uid="uid://dk6ae1x6cdayf" path="res://assets/audio/sfx/jump_3.mp3" id="12_axugo"]
+[ext_resource type="AudioStream" uid="uid://dhkw4ijpifhp6" path="res://assets/audio/sfx/jump_4.mp3" id="13_pfbvr"]
 [ext_resource type="AudioStream" uid="uid://ca50pnq5dgdgy" path="res://assets/audio/music/0005.wav" id="13_ppsph"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6p7uu"]
@@ -494,7 +494,7 @@ position = Vector2(92, -360)
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(2.08165e-12, 2)
 script = ExtResource("3_bjlrj")
-jump_sounds = Array[AudioStreamMP3]([ExtResource("8_0mepk"), ExtResource("9_35nej"), ExtResource("9_j0p00"), ExtResource("8_sthwf")])
+jump_sounds = Array[AudioStreamMP3]([ExtResource("10_1mgig"), ExtResource("11_8gy5a"), ExtResource("12_axugo"), ExtResource("13_pfbvr")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 position = Vector2(2.08165e-12, 0)
