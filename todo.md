@@ -1,6 +1,5 @@
 # To do
 
-- Add debug mode reset button
 - Add full screen toggle in main menu
 - Add level end zone/body
 - Add timer
@@ -52,3 +51,4 @@
   - save as scene and instantiate in a few places
   - `if body == $Player` move to other door
 - Build out level 1
+- Add debug mode reset button
