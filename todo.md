@@ -1,6 +1,5 @@
 # To do
 
-- Build out level 1
 - Add level end zone/body
 - Add timer
 - Stop timer when you reach the end of the level
@@ -48,3 +47,4 @@
   - body entered signal on area 2D
   - save as scene and instantiate in a few places
   - `if body == $Player` move to other door
+- Build out level 1
