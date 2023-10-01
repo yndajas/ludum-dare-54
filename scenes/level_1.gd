@@ -11,3 +11,7 @@ func _process(delta: float) -> void:
 func _on_door_1_body_entered(body: Node2D) -> void:
 	if body == $Player:
 		$Player.position = Vector2(-472, -664)
+
+func _on_door_2_body_entered(body: Node2D) -> void:
+	if body == $Player:
+		$Player.position = Vector2(464, -448)

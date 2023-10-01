@@ -495,3 +495,4 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [connection signal="body_entered" from="Door1" to="." method="_on_door_1_body_entered"]
+[connection signal="body_entered" from="Door2" to="." method="_on_door_2_body_entered"]
