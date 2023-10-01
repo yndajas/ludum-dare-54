@@ -493,3 +493,5 @@ position = Vector2(2.08165e-12, 2.08165e-12)
 zoom = Vector2(2, 2)
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[connection signal="body_entered" from="Door1" to="." method="_on_door_1_body_entered"]

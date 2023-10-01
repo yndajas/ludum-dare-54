@@ -1,10 +1,5 @@
 # To do
 
-- Add portal doors
-  - area 2D with collison shape 2D and animated sprite 2D child nodes
-  - body entered signal on area 2D
-  - save as scene and instantiate in a few places
-  - `if body == $Player` move to paired door (save door reference as variable?)?
 - Build out level 1
 - Add level end zone/body
 - Add timer
@@ -26,6 +21,7 @@
 - Custom collision assets
 - Custom decorative assets
 - Make collision shape smaller when jumping (in line with sprite shape) [https://stackoverflow.com/questions/50725998/godot-3-0-change-collision-box-at-runtime]
+- Refine door entered repositioning - create an abstract receiving door and move to an instance of that?
 
 ## Done
 
@@ -47,3 +43,8 @@
 - Add custom input (project settings, input map) and get it working with main menu and level 1 ("move_left", "move_right", "jump", "return_to_main_menu")
 - Add global return to menu function (project settings, autoload, add Global, add `_input` function with `if event.is_action_pressed("return_to_main_menu")`)
 - Add camera (camera2D attached to player; zoom 3 or so; add drag)
+- Add portal doors
+  - area 2D with collison shape 2D and animated sprite 2D child nodes
+  - body entered signal on area 2D
+  - save as scene and instantiate in a few places
+  - `if body == $Player` move to other door
