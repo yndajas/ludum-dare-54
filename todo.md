@@ -13,6 +13,7 @@
 
 ## Stretch goals
 
+- Hide cursor in full screen mode if keyboard or controller is used but reveal again when mouse moves [https://www.youtube.com/watch?v=-nNxUiHJ97]
 - Level end sound effect
 - Redesign the sprites (make them nicer)
 - Level 2 (need shared player with scene saved as script and instantiated child scenes)
