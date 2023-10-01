@@ -1,6 +1,5 @@
 # To do
 
-- Add full screen toggle in main menu
 - Add level end zone/body
 - Add timer
 - Stop timer when you reach the end of the level
@@ -52,3 +51,4 @@
   - `if body == $Player` move to other door
 - Build out level 1
 - Add debug mode reset button
+- Add full screen toggle in main menu
