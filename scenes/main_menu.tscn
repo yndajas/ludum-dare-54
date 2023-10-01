@@ -36,14 +36,14 @@ text = "[center]Level assets from kenney.nl
 
 [node name="MenuItems" type="VBoxContainer" parent="."]
 offset_left = 195.0
-offset_top = 136.0
+offset_top = 112.0
 offset_right = 445.0
-offset_bottom = 224.0
+offset_bottom = 252.0
 theme_override_constants/separation = 16
 
 [node name="StartButton" type="Button" parent="MenuItems"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../ToggleFullScreenButton")
+focus_neighbor_top = NodePath("../QuitButton")
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -61,7 +61,6 @@ vertical_icon_alignment = 0
 
 [node name="ToggleFullScreenButton" type="Button" parent="MenuItems"]
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../StartButton")
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -77,7 +76,27 @@ theme_override_styles/focus = ExtResource("4_g4ys0")
 text = "Toggle full screen"
 vertical_icon_alignment = 0
 
+[node name="QuitButton" type="Button" parent="MenuItems"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../StartButton")
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.796078, 0.858824, 0.988235, 1)
+theme_override_colors/font_focus_color = Color(0.796078, 0.858824, 0.988235, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_w6bm7")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = ExtResource("4_g4ys0")
+theme_override_styles/hover = ExtResource("4_g4ys0")
+theme_override_styles/pressed = ExtResource("4_g4ys0")
+theme_override_styles/focus = ExtResource("4_g4ys0")
+text = "Quit"
+vertical_icon_alignment = 0
+
 [connection signal="mouse_entered" from="MenuItems/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="MenuItems/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="mouse_entered" from="MenuItems/ToggleFullScreenButton" to="." method="_on_toggle_full_screen_button_mouse_entered"]
 [connection signal="pressed" from="MenuItems/ToggleFullScreenButton" to="." method="_on_toggle_full_screen_button_pressed"]
+[connection signal="mouse_entered" from="MenuItems/QuitButton" to="." method="_on_quit_button_mouse_entered"]
+[connection signal="pressed" from="MenuItems/QuitButton" to="." method="_on_quit_button_pressed"]

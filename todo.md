@@ -52,3 +52,4 @@
 - Build out level 1
 - Add debug mode reset button
 - Add full screen toggle in main menu
+- Add quit button

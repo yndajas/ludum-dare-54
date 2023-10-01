@@ -17,8 +17,14 @@ func _on_toggle_full_screen_button_pressed() -> void:
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
+func _on_quit_button_pressed() -> void:
+	get_tree().quit()
+
 func _on_start_button_mouse_entered() -> void:
 	$MenuItems/StartButton.grab_focus()
 
 func _on_toggle_full_screen_button_mouse_entered() -> void:
 	$MenuItems/ToggleFullScreenButton.grab_focus()
+
+func _on_quit_button_mouse_entered() -> void:
+	$MenuItems/QuitButton.grab_focus()
