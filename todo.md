@@ -1,5 +1,7 @@
 # To do
 
+- Add debug mode reset button
+- Add full screen toggle in main menu
 - Add level end zone/body
 - Add timer
 - Stop timer when you reach the end of the level
@@ -19,6 +21,7 @@
   - Trigger jump start/end when moving from/to ground
 - Custom collision assets
 - Custom decorative assets
+- Death when falling out of bounds
 - Make collision shape smaller when jumping (in line with sprite shape) [https://stackoverflow.com/questions/50725998/godot-3-0-change-collision-box-at-runtime]
 - Refine door entered repositioning - create an abstract receiving door and move to an instance of that?
 
