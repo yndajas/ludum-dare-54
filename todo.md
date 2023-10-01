@@ -56,3 +56,4 @@
 - Music mute button/key
 - Refactor random jump trigger to use single audio player like music
 - Menu sound effects
+- Hide full screen and exit buttons on non-PC builds

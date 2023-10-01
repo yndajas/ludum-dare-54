@@ -17,6 +17,10 @@ func _ready() -> void:
 		"quit": quit_sounds
 	}
 	$MenuItems/StartButton.grab_focus()
+	
+	if !OS.has_feature("pc"):
+		$MenuItems/ToggleFullScreenButton.hide()
+		$MenuItems/QuitButton.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
