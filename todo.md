@@ -55,3 +55,4 @@
 - Music
 - Music mute button/key
 - Refactor random jump trigger to use single audio player like music
+- Menu sound effects

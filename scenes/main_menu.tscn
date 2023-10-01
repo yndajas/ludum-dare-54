@@ -1,12 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://bp0k3cnbsvoac"]
+[gd_scene load_steps=14 format=3 uid="uid://bp0k3cnbsvoac"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_bq35h"]
+[ext_resource type="AudioStream" uid="uid://ubbuauf3cg7e" path="res://assets/audio/sfx/goodbye_1.wav" id="2_braqs"]
 [ext_resource type="Texture2D" uid="uid://boiq1w4ecdi4s" path="res://assets/images/main_menu_background.png" id="2_phc6h"]
+[ext_resource type="AudioStream" uid="uid://c1v7h7x64877y" path="res://assets/audio/sfx/start_game_1.wav" id="3_ktfor"]
 [ext_resource type="FontFile" uid="uid://b8wld6j0s08ch" path="res://assets/fonts/PixelOperator8.ttf" id="3_w6bm7"]
 [ext_resource type="StyleBox" uid="uid://ck5vn706myxwq" path="res://assets/styleboxes/main_menu_button.tres" id="4_g4ys0"]
+[ext_resource type="AudioStream" uid="uid://boi7rcm4mc3ab" path="res://assets/audio/sfx/start_game_2.wav" id="4_o5g1k"]
+[ext_resource type="AudioStream" uid="uid://dbmwd7r0v02t5" path="res://assets/audio/sfx/start_game_3.wav" id="5_3agi1"]
+[ext_resource type="AudioStream" uid="uid://crbob1ki6cndj" path="res://assets/audio/sfx/start_game_4.wav" id="6_a1iup"]
+[ext_resource type="AudioStream" uid="uid://0o1ruy8apm77" path="res://assets/audio/sfx/start_game_5.wav" id="7_gk7qf"]
+[ext_resource type="AudioStream" uid="uid://dggqn532xhijb" path="res://assets/audio/sfx/start_game_6.wav" id="8_v6hud"]
+[ext_resource type="AudioStream" uid="uid://75b7lhrqcye2" path="res://assets/audio/sfx/toggle_full_screen_1.wav" id="9_cim2p"]
+[ext_resource type="AudioStream" uid="uid://bdajysnhdu8he" path="res://assets/audio/sfx/quit_1.wav" id="10_quy6a"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_bq35h")
+goodbye_sounds = Array[AudioStreamWAV]([ExtResource("2_braqs")])
+start_game_sounds = Array[AudioStreamWAV]([ExtResource("3_ktfor"), ExtResource("4_o5g1k"), ExtResource("5_3agi1"), ExtResource("6_a1iup"), ExtResource("7_gk7qf"), ExtResource("8_v6hud")])
+toggle_full_screen_sounds = Array[AudioStreamWAV]([ExtResource("9_cim2p")])
+quit_sounds = Array[AudioStreamWAV]([ExtResource("10_quy6a")])
 
 [node name="MainMenuBackground" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
@@ -96,9 +109,15 @@ theme_override_styles/focus = ExtResource("4_g4ys0")
 text = "Quit"
 vertical_icon_alignment = 0
 
+[node name="SfxPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="focus_entered" from="MenuItems/StartButton" to="." method="_on_start_button_focus_entered"]
 [connection signal="mouse_entered" from="MenuItems/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="MenuItems/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="focus_entered" from="MenuItems/ToggleFullScreenButton" to="." method="_on_toggle_full_screen_button_focus_entered"]
 [connection signal="mouse_entered" from="MenuItems/ToggleFullScreenButton" to="." method="_on_toggle_full_screen_button_mouse_entered"]
 [connection signal="pressed" from="MenuItems/ToggleFullScreenButton" to="." method="_on_toggle_full_screen_button_pressed"]
+[connection signal="focus_entered" from="MenuItems/QuitButton" to="." method="_on_quit_button_focus_entered"]
 [connection signal="mouse_entered" from="MenuItems/QuitButton" to="." method="_on_quit_button_mouse_entered"]
 [connection signal="pressed" from="MenuItems/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="finished" from="SfxPlayer" to="." method="_on_sfx_player_finished"]
