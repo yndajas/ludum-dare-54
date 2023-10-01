@@ -15,8 +15,8 @@ func _process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("return_to_main_menu"):
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
-	
-	if OS.is_debug_build() && event.is_action_pressed("reset_level"):
+
+	if event.is_action_pressed("reset_level"):
 		get_tree().change_scene_to_file("res://scenes/level_1.tscn")
 
 func _on_door_1_body_entered(body: Node2D) -> void:
