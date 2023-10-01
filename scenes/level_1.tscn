@@ -522,11 +522,11 @@ drag_vertical_enabled = true
 
 [node name="JumpSfxPlayer" type="AudioStreamPlayer" parent="Player"]
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -20.0
 
 [node name="Timer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="Door1" to="." method="_on_door_1_body_entered"]
 [connection signal="body_entered" from="Door2" to="." method="_on_door_2_body_entered"]
-[connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="finished" from="MusicPlayer" to="." method="_on_music_finished"]

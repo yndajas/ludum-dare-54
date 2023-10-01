@@ -23,7 +23,7 @@ func _input(event: InputEvent) -> void:
 		get_tree().change_scene_to_file("res://scenes/level_1.tscn")
 
 	if event.is_action_pressed("toggle_music"):
-		$Music.stream_paused = !$Music.stream_paused
+		$MusicPlayer.stream_paused = !$MusicPlayer.stream_paused
 
 func _on_door_1_body_entered(body: Node2D) -> void:
 	if body == $Player:
@@ -39,10 +39,10 @@ func _on_music_finished() -> void:
 	loop_music()
 
 func loop_music() -> void:
-	$Music.stream = stream
-	$Music.stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
-	$Music.play()
+	$MusicPlayer.stream = stream
+	$MusicPlayer.stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
+	$MusicPlayer.play()
 
 func queue_track_change(new_track: AudioStreamWAV) -> void:
 	stream = new_track
-	$Music.stream.loop_mode = AudioStreamWAV.LOOP_DISABLED
+	$MusicPlayer.stream.loop_mode = AudioStreamWAV.LOOP_DISABLED
