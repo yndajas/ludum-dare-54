@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://275i0f2dku1u"]
 
+[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_fd623"]
 [ext_resource type="FontFile" uid="uid://b8wld6j0s08ch" path="res://assets/fonts/PixelOperator8.ttf" id="1_hrp24"]
-[ext_resource type="Script" path="res://scenes/level_1.gd" id="1_piauc"]
 [ext_resource type="Texture2D" uid="uid://diwlqqgf0gj8t" path="res://assets/images/sprites/tilemap.png" id="2_72y4e"]
 [ext_resource type="Texture2D" uid="uid://cttcmmnrbmw5t" path="res://assets/images/sprites/sun.png" id="2_s1a1b"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="3_bjlrj"]
@@ -452,7 +452,7 @@ animations = [{
 height = 24.0
 
 [node name="Level1" type="Node2D"]
-script = ExtResource("1_piauc")
+script = ExtResource("1_fd623")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
