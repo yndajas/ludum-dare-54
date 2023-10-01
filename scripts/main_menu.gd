@@ -8,7 +8,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_button_pressed() -> void:
+func _on_start_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
 
 func _on_toggle_full_screen_button_pressed() -> void:

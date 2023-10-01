@@ -78,6 +78,6 @@ text = "Toggle full screen"
 vertical_icon_alignment = 0
 
 [connection signal="mouse_entered" from="MenuItems/StartButton" to="." method="_on_start_button_mouse_entered"]
-[connection signal="pressed" from="MenuItems/StartButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MenuItems/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="mouse_entered" from="MenuItems/ToggleFullScreenButton" to="." method="_on_toggle_full_screen_button_mouse_entered"]
 [connection signal="pressed" from="MenuItems/ToggleFullScreenButton" to="." method="_on_toggle_full_screen_button_pressed"]
