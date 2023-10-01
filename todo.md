@@ -6,7 +6,6 @@
 - Report time at end of level
 - Collectibles - should they track across levels, prevent level doors etc or should they be more like coins where there's no real benefit to collecting them all (or should there be lives?). Should collectibles be a challenge to collect?
 - Should the collectibles: count towards score (additive or multiplicative?); stop the timer temporarily; subtract from your time (e.g. -2s per collectible); give you temporary speed boost?
-- Add basic jump sound effect (randomly trigger silly jump sound)
 - Music
 
 ## Stretch goals
@@ -53,3 +52,4 @@
 - Add debug mode reset button
 - Add full screen toggle in main menu
 - Add quit button
+- Add basic jump sound effect (randomly trigger silly jump sound)

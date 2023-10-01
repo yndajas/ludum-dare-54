@@ -28,6 +28,7 @@ func set_movement(delta: float) -> void:
 		velocity.y += gravity * delta
 	elif Input.is_action_just_pressed("jump"):
 		velocity.y = JUMP_VELOCITY
+		play_jump_sfx()
 
 	var direction := get_direction()
 	if direction:
@@ -43,3 +44,6 @@ func set_orientation() -> void:
 			$AnimatedSprite2D.flip_h = true
 		else:
 			$AnimatedSprite2D.flip_h = false
+
+func play_jump_sfx() -> void:
+	get_tree().get_nodes_in_group('jump_sounds').pick_random().play()
