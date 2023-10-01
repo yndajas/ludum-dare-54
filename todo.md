@@ -53,3 +53,4 @@
 - Add quit button
 - Add basic jump sound effect (randomly trigger silly jump sound)
 - Music
+- Music mute button/key
