@@ -469,6 +469,15 @@ position = Vector2(50, 50)
 scale = Vector2(4, 4)
 texture = ExtResource("2_s1a1b")
 
+[node name="Time" type="RichTextLabel" parent="CanvasLayer"]
+offset_top = 102.0
+offset_right = 100.0
+offset_bottom = 118.0
+theme_override_fonts/normal_font = ExtResource("1_hrp24")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[center]0.00"
+
 [node name="LevelIndicator" type="RichTextLabel" parent="."]
 offset_left = 8.0
 offset_top = -56.0
@@ -515,6 +524,8 @@ drag_vertical_enabled = true
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 volume_db = -20.0
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="Door1" to="." method="_on_door_1_body_entered"]
 [connection signal="body_entered" from="Door2" to="." method="_on_door_2_body_entered"]
