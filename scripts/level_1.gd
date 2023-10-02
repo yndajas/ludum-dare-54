@@ -48,6 +48,16 @@ func _on_music_finished() -> void:
 	if !goal_reached:
 		loop_music()
 
+func _on_end_text_timer_timeout() -> void:
+	var set_visible = !$EndTextTimer/Congratulations.visible
+	if set_visible:
+		$EndTextTimer.start(1.5)
+	else:
+		$EndTextTimer.start(0.75)
+
+	$EndTextTimer/Congratulations.visible = set_visible
+	$EndTextTimer/Result.visible = set_visible
+
 func _on_easter_egg_timer_timeout() -> void:
 	$EasterEggTimer/Player.play()
 
@@ -73,8 +83,11 @@ func wrap_up() -> void:
 
 	$CongratulationsPlayer.play()
 	$EasterEggTimer.start()
-	
-	$CongratulationsText.show()
-	$ResultText.text = "[right]" + time_elapsed_rounded_string + " seconds"
-	$ResultText.show()
+	trigger_end_text()
+
+func trigger_end_text() -> void:
 	$CanvasLayer/Time.hide()
+	$EndTextTimer/Congratulations.show()
+	$EndTextTimer/Result.text = "[right]" + time_elapsed_rounded_string + " seconds"
+	$EndTextTimer/Result.show()
+	$EndTextTimer.start()
