@@ -1,6 +1,5 @@
 # To do
 
-- Add level end zone/body
 - Stop timer when you reach the end of the level
 - Report time at end of level
 - Collectibles - should they track across levels, prevent level doors etc or should they be more like coins where there's no real benefit to collecting them all (or should there be lives?). Should collectibles be a challenge to collect?
@@ -57,3 +56,4 @@
 - Menu sound effects
 - Hide full screen and exit buttons on non-PC builds
 - Add timer
+- Add level end zone/body
