@@ -1,6 +1,5 @@
 # To do
 
-- Redesign the sprites (make them nicer) - thicker outline
 - Activate `jump_start_end` animation (add `previous_tick_off_ground` variable, or perhaps `ticks_off_ground` and switch to `jump_middle` after ~5-10 ticks) - not sure if there's an easy way to trigger back into it
 - Make cover art and playthrough video
 - Export and upload to itch.io
@@ -62,3 +61,4 @@
 - Stop timer when you reach the end of the level
 - Report time at end of level
 - Level end sound effect
+- Redesign the sprites (make them nicer) - thicker outline
