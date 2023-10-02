@@ -578,15 +578,15 @@ text = "[right]0.00 seconds"
 
 [node name="CongratulationsPlayer" type="AudioStreamPlayer" parent="."]
 
-[node name="EndPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("19_4vbtp")
-
-[node name="EndPlayerTimer" type="Timer" parent="."]
-wait_time = 10.0
+[node name="EasterEggTimer" type="Timer" parent="."]
+wait_time = 30.0
 one_shot = true
+
+[node name="Player" type="AudioStreamPlayer" parent="EasterEggTimer"]
+stream = ExtResource("19_4vbtp")
 
 [connection signal="body_entered" from="Door1" to="." method="_on_door_1_body_entered"]
 [connection signal="body_entered" from="Door2" to="." method="_on_door_2_body_entered"]
 [connection signal="body_entered" from="Goal" to="." method="_on_goal_body_entered"]
 [connection signal="finished" from="MusicPlayer" to="." method="_on_music_finished"]
-[connection signal="timeout" from="EndPlayerTimer" to="." method="_on_end_player_timer_timeout"]
+[connection signal="timeout" from="EasterEggTimer" to="." method="_on_easter_egg_timer_timeout"]

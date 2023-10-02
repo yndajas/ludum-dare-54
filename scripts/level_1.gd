@@ -48,8 +48,8 @@ func _on_music_finished() -> void:
 	if !goal_reached:
 		loop_music()
 
-func _on_end_player_timer_timeout() -> void:
-	$EndPlayer.play()
+func _on_easter_egg_timer_timeout() -> void:
+	$EasterEggTimer/Player.play()
 
 func loop_music() -> void:
 	$MusicPlayer.stream = music_stream
@@ -72,7 +72,7 @@ func wrap_up() -> void:
 		$CongratulationsPlayer.stream = congratulations_tracks[2]
 
 	$CongratulationsPlayer.play()
-	$EndPlayerTimer.start()
+	$EasterEggTimer.start()
 	
 	$CongratulationsText.show()
 	$ResultText.text = "[right]" + time_elapsed_rounded_string + " seconds"
