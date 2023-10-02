@@ -3,7 +3,6 @@
 - Stop timer when you reach the end of the level
 - Report time at end of level
 - Level end sound effect
-- Change door node to Sprite2D
 
 ## Stretch goals
 
@@ -59,3 +58,4 @@
 - Add timer
 - Add level end zone/body
 - Stop player when goal reached
+- Change door node to Sprite2D
