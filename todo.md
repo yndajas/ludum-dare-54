@@ -1,8 +1,12 @@
 # To do
 
+- Redesign the sprites (make them nicer) - thicker outline
+- Activate `jump_start_end` animation (add `previous_tick_off_ground` variable, or perhaps `ticks_off_ground` and switch to `jump_middle` after ~5-10 ticks) - not sure if there's an easy way to trigger back into it
+- Make cover art and playthrough video
+- Export and upload to itch.io
+
 ## Stretch goals
 
-- Redesign the sprites (make them nicer)
 - Custom collision assets
 - Custom decorative assets
 - Collectibles - should they track across levels, prevent level doors etc or should they be more like coins where there's no real benefit to collecting them all (or should there be lives?). Should collectibles be a challenge to collect?
