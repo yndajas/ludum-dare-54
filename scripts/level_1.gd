@@ -4,13 +4,13 @@ extends Node2D
 @export var music_tracks: Array[AudioStreamWAV]
 
 @onready var congratulations_player: AudioStreamPlayer = $CongratulationsPlayer
-@onready var congratulations_text: RichTextLabel = $EndTextTimer/Congratulations
+@onready var congratulations_text: RichTextLabel = $CanvasLayer/Congratulations
 @onready var easter_egg_player: AudioStreamPlayer = $EasterEggTimer/Player
 @onready var easter_egg_timer: Timer = $EasterEggTimer
 @onready var end_text_timer: Timer = $EndTextTimer
 @onready var music_player: AudioStreamPlayer = $MusicPlayer
 @onready var player: CharacterBody2D = $Player
-@onready var result_text: RichTextLabel = $EndTextTimer/Result
+@onready var result_text: RichTextLabel = $CanvasLayer/Result
 @onready var time_indicator: RichTextLabel = $CanvasLayer/Time
 
 var goal_reached: bool = false

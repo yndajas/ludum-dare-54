@@ -65,3 +65,4 @@
 - Redesign the sprites (make them nicer) - thicker outline
 - Fix collision object on player
 - Pulse end text
+- Move congratulations/result to canvas layer
