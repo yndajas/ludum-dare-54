@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 @export var jump_sounds: Array[AudioStreamMP3]
 
+@onready var jump_sfx_player: AudioStreamPlayer = $JumpSfxPlayer
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+
 const SPEED = 200.0
 const JUMP_VELOCITY = -350.0
 
@@ -20,11 +23,11 @@ func _physics_process(delta: float) -> void:
 
 func set_animation() -> void:
 	if not is_on_floor():
-		$AnimatedSprite2D.play("jump_middle")
+		sprite.play("jump_middle")
 	elif direction && !goal_reached:
-		$AnimatedSprite2D.play("run")
+		sprite.play("run")
 	else:
-		$AnimatedSprite2D.play("idle")
+		sprite.play("idle")
 
 func set_movement(delta: float) -> void:
 	if not is_on_floor():
@@ -42,10 +45,10 @@ func set_movement(delta: float) -> void:
 func set_orientation() -> void:
 	if direction && !goal_reached:
 		if direction == -1:
-			$AnimatedSprite2D.flip_h = true
+			sprite.flip_h = true
 		else:
-			$AnimatedSprite2D.flip_h = false
+			sprite.flip_h = false
 
 func play_jump_sfx() -> void:
-	$JumpSfxPlayer.stream = jump_sounds.pick_random()
-	$JumpSfxPlayer.play()
+	jump_sfx_player.stream = jump_sounds.pick_random()
+	jump_sfx_player.play()

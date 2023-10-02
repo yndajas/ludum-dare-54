@@ -5,6 +5,11 @@ extends Node2D
 @export var toggle_full_screen_sounds: Array[AudioStreamWAV]
 @export var quit_sounds: Array[AudioStreamWAV]
 
+@onready var quit_button: Button = $MenuItems/QuitButton
+@onready var sfx_player: AudioStreamPlayer = $SfxPlayer
+@onready var start_button: Button = $MenuItems/StartButton
+@onready var toggle_full_screen_button: Button = $MenuItems/ToggleFullScreenButton
+
 var sounds: Dictionary
 var exit_initiated: bool = false
 
@@ -16,11 +21,11 @@ func _ready() -> void:
 		"toggle_full_screen": toggle_full_screen_sounds,
 		"quit": quit_sounds
 	}
-	$MenuItems/StartButton.grab_focus()
+	start_button.grab_focus()
 	
 	if !OS.has_feature("pc"):
-		$MenuItems/ToggleFullScreenButton.hide()
-		$MenuItems/QuitButton.hide()
+		toggle_full_screen_button.hide()
+		quit_button.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -50,13 +55,13 @@ func _on_quit_button_focus_entered() -> void:
 	play_random_sound("quit")
 
 func _on_start_button_mouse_entered() -> void:
-	$MenuItems/StartButton.grab_focus()
+	start_button.grab_focus()
 
 func _on_toggle_full_screen_button_mouse_entered() -> void:
-	$MenuItems/ToggleFullScreenButton.grab_focus()
+	toggle_full_screen_button.grab_focus()
 
 func _on_quit_button_mouse_entered() -> void:
-	$MenuItems/QuitButton.grab_focus()
+	quit_button.grab_focus()
 
 func _on_sfx_player_finished() -> void:
 	if exit_initiated:
@@ -64,5 +69,5 @@ func _on_sfx_player_finished() -> void:
 
 func play_random_sound(action: String) -> void:
 	var stream = sounds[action].pick_random()
-	$SfxPlayer.stream = stream
-	$SfxPlayer.play()
+	sfx_player.stream = stream
+	sfx_player.play()
