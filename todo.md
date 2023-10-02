@@ -1,6 +1,5 @@
 # To do
 
-- Activate `jump_start_end` animation (add `previous_tick_off_ground` variable, or perhaps `ticks_off_ground` and switch to `jump_middle` after ~5-10 ticks) - not sure if there's an easy way to trigger back into it
 - Make cover art and playthrough video
 - Export and upload to itch.io
 
@@ -66,3 +65,4 @@
 - Pulse end text
 - Move congratulations/result to canvas layer
 - Print controls on screen
+- Activate `jump_start` animation on leaving ground, then `jump_middle` only from 11 or more frames off the ground

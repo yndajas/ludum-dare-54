@@ -11,6 +11,7 @@ const SPEED = 200.0
 var direction: float = 0.0
 var goal_reached: bool = false
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
+var frames_not_on_floor: int = 0
 
 func _physics_process(delta: float) -> void:
 	direction = Input.get_axis("move_left", "move_right")
@@ -19,10 +20,14 @@ func _physics_process(delta: float) -> void:
 	set_orientation()
 	set_movement(delta)
 	move_and_slide()
+	update_frames_on_floor()
 
 func set_animation() -> void:
 	if not is_on_floor():
-		sprite.play("jump_middle")
+		if frames_not_on_floor <=10:
+			sprite.play("jump_start")
+		else:
+			sprite.play("jump_middle")
 	elif direction && !goal_reached:
 		sprite.play("run")
 	else:
@@ -51,3 +56,9 @@ func set_orientation() -> void:
 func play_jump_sfx() -> void:
 	jump_sfx_player.stream = jump_sounds.pick_random()
 	jump_sfx_player.play()
+
+func update_frames_on_floor() -> void:
+	if is_on_floor():
+		frames_not_on_floor = 0
+	else:
+		frames_not_on_floor += 1
