@@ -1,17 +1,17 @@
 extends Node2D
 
 @export var goodbye_sounds: Array[AudioStreamWAV]
+@export var quit_sounds: Array[AudioStreamWAV]
 @export var start_game_sounds: Array[AudioStreamWAV]
 @export var toggle_full_screen_sounds: Array[AudioStreamWAV]
-@export var quit_sounds: Array[AudioStreamWAV]
 
 @onready var quit_button: Button = $MenuItems/QuitButton
 @onready var sfx_player: AudioStreamPlayer = $SfxPlayer
 @onready var start_button: Button = $MenuItems/StartButton
 @onready var toggle_full_screen_button: Button = $MenuItems/ToggleFullScreenButton
 
-var sounds: Dictionary
 var exit_initiated: bool = false
+var sounds: Dictionary
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

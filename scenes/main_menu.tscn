@@ -17,9 +17,9 @@
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_bq35h")
 goodbye_sounds = Array[AudioStreamWAV]([ExtResource("2_braqs")])
+quit_sounds = Array[AudioStreamWAV]([ExtResource("10_quy6a")])
 start_game_sounds = Array[AudioStreamWAV]([ExtResource("3_ktfor"), ExtResource("4_o5g1k"), ExtResource("5_3agi1"), ExtResource("6_a1iup"), ExtResource("7_gk7qf"), ExtResource("8_v6hud")])
 toggle_full_screen_sounds = Array[AudioStreamWAV]([ExtResource("9_cim2p")])
-quit_sounds = Array[AudioStreamWAV]([ExtResource("10_quy6a")])
 
 [node name="MainMenuBackground" type="Sprite2D" parent="."]
 position = Vector2(320, 180)

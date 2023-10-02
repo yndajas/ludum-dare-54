@@ -1,7 +1,7 @@
 extends Node2D
 
-@export var music_tracks: Array[AudioStreamWAV]
 @export var congratulations_tracks: Array[AudioStreamWAV]
+@export var music_tracks: Array[AudioStreamWAV]
 
 @onready var congratulations_player: AudioStreamPlayer = $CongratulationsPlayer
 @onready var congratulations_text: RichTextLabel = $EndTextTimer/Congratulations

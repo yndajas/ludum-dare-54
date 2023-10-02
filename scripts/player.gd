@@ -5,13 +5,13 @@ extends CharacterBody2D
 @onready var jump_sfx_player: AudioStreamPlayer = $JumpSfxPlayer
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-const SPEED = 200.0
 const JUMP_VELOCITY = -350.0
+const SPEED = 200.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var direction: float = 0.0
-var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 var goal_reached: bool = false
+var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta: float) -> void:
 	direction = Input.get_axis("move_left", "move_right")
