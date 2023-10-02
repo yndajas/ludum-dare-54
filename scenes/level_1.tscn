@@ -518,6 +518,15 @@ theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "[right]0.00 seconds"
 
+[node name="Controls" type="RichTextLabel" parent="CanvasLayer"]
+offset_top = 344.0
+offset_right = 640.0
+offset_bottom = 352.0
+theme_override_fonts/normal_font = ExtResource("1_hrp24")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center]Escape/start = return to menu    R/triangle = reset level    M/square = toggle music"
+
 [node name="LevelIndicator" type="RichTextLabel" parent="."]
 offset_left = 8.0
 offset_top = -56.0
