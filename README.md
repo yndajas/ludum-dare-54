@@ -1,4 +1,4 @@
-# You got the pumpkin! <!-- markdownlint-disable-line MD026 -->
+# Get The Pumpkin! <!-- markdownlint-disable-line MD026 -->
 
 First game I've made from scratch, made for [Ludum Dare 54](https://ldjam.com/events/ludum-dare/54)
 
