@@ -57,3 +57,4 @@
 - Hide full screen and exit buttons on non-PC builds
 - Add timer
 - Add level end zone/body
+- Stop player when goal reached
