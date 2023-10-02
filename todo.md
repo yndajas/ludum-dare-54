@@ -1,8 +1,5 @@
 # To do
 
-- Make cover art and playthrough video
-- Export and upload to itch.io
-
 ## Stretch goals
 
 - Custom collision assets
@@ -66,3 +63,5 @@
 - Move congratulations/result to canvas layer
 - Print controls on screen
 - Activate `jump_start` animation on leaving ground, then `jump_middle` only from 11 or more frames off the ground
+- Make cover art and playthrough video
+- Export and upload to itch.io
