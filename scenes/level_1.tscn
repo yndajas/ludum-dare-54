@@ -572,7 +572,7 @@ text = "[right]0.00 seconds"
 [node name="EndPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_4vbtp")
 
-[node name="EndPlayerTimer" type="Timer" parent="EndPlayer"]
+[node name="EndPlayerTimer" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
 
@@ -580,4 +580,4 @@ one_shot = true
 [connection signal="body_entered" from="Door2" to="." method="_on_door_2_body_entered"]
 [connection signal="body_entered" from="Goal" to="." method="_on_goal_body_entered"]
 [connection signal="finished" from="MusicPlayer" to="." method="_on_music_finished"]
-[connection signal="timeout" from="EndPlayer/EndPlayerTimer" to="." method="_on_end_player_timer_timeout"]
+[connection signal="timeout" from="EndPlayerTimer" to="." method="_on_end_player_timer_timeout"]

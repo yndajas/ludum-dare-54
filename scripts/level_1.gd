@@ -71,7 +71,7 @@ func wrap_up() -> void:
 		$CongratulationsPlayer.stream = congratulations_tracks[2]
 
 	$CongratulationsPlayer.play()
-	$EndPlayer/EndPlayerTimer.start()
+	$EndPlayerTimer.start()
 	
 	$CongratulationsText.show()
 	$ResultText.text = "[right]" + time_elapsed_rounded_string + " seconds"
