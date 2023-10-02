@@ -2,23 +2,24 @@
 
 - Stop timer when you reach the end of the level
 - Report time at end of level
-- Collectibles - should they track across levels, prevent level doors etc or should they be more like coins where there's no real benefit to collecting them all (or should there be lives?). Should collectibles be a challenge to collect?
-- Should the collectibles: count towards score (additive or multiplicative?); stop the timer temporarily; subtract from your time (e.g. -2s per collectible); give you temporary speed boost?
+- Level end sound effect
+- Change door node to Sprite2D
 
 ## Stretch goals
 
-- Hide cursor in full screen mode if keyboard or controller is used but reveal again when mouse moves [https://www.youtube.com/watch?v=-nNxUiHJ97]
-- Level end sound effect
 - Redesign the sprites (make them nicer)
+- Custom collision assets
+- Custom decorative assets
+- Collectibles - should they track across levels, prevent level doors etc or should they be more like coins where there's no real benefit to collecting them all (or should there be lives?). Should collectibles be a challenge to collect?
+- Should the collectibles: count towards score (additive or multiplicative?); stop the timer temporarily; subtract from your time (e.g. -2s per collectible); give you temporary speed boost?
+- Hide cursor in full screen mode if keyboard or controller is used but reveal again when mouse moves [https://www.youtube.com/watch?v=-nNxUiHJ97]
 - Level 2 (need shared player with scene saved as script and instantiated child scenes)
 - Add state machine
   - Refine jump sound effect (juh moving off ground; uhh when in air; mp when reaching the ground)
   - Trigger jump start/end when moving from/to ground
-- Custom collision assets
-- Custom decorative assets
 - Death when falling out of bounds
 - Make collision shape smaller when jumping (in line with sprite shape) [https://stackoverflow.com/questions/50725998/godot-3-0-change-collision-box-at-runtime]
-- Refine door entered repositioning - create an abstract receiving door and move to an instance of that?
+- Refactor door entered repositioning - create an abstract receiving door and move to an instance of that?
 
 ## Done
 
