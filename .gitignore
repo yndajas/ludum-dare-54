@@ -3,3 +3,6 @@
 
 # Audacity temporary files
 *.aup3-wal
+
+# Builds
+build/
