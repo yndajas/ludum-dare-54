@@ -12,9 +12,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	time_elapsed += delta
-	var time_elapsed_rounded_string: String = "%.2f" % time_elapsed
-	$CanvasLayer/Time.text = "[center]" + time_elapsed_rounded_string
+	if !goal_reached:
+		time_elapsed += delta
+		var time_elapsed_rounded_string: String = "%.2f" % time_elapsed
+		$CanvasLayer/Time.text = "[center]" + time_elapsed_rounded_string
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("return_to_main_menu"):
