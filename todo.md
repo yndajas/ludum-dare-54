@@ -1,5 +1,6 @@
 # To do
 
+- Print controls on screen
 - Activate `jump_start_end` animation (add `previous_tick_off_ground` variable, or perhaps `ticks_off_ground` and switch to `jump_middle` after ~5-10 ticks) - not sure if there's an easy way to trigger back into it
 - Make cover art and playthrough video
 - Export and upload to itch.io
