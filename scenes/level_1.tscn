@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://275i0f2dku1u"]
+[gd_scene load_steps=30 format=3 uid="uid://275i0f2dku1u"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_fd623"]
 [ext_resource type="FontFile" uid="uid://b8wld6j0s08ch" path="res://assets/fonts/PixelOperator8.ttf" id="1_hrp24"]
@@ -7,14 +7,18 @@
 [ext_resource type="AudioStream" uid="uid://xdhnq3rntya3" path="res://assets/audio/music/0001.wav" id="2_u5oau"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="3_bjlrj"]
 [ext_resource type="Texture2D" uid="uid://c8k40aiaswddv" path="res://assets/images/sprites/player.png" id="3_vc1mj"]
+[ext_resource type="AudioStream" uid="uid://m03m8ovxbtdd" path="res://assets/audio/sfx/vamos.wav" id="5_28kgx"]
 [ext_resource type="PackedScene" uid="uid://0r3qxg1aorwv" path="res://scenes/door.tscn" id="5_ubr64"]
 [ext_resource type="AudioStream" uid="uid://ddc530o7v6dx8" path="res://assets/audio/music/0008.wav" id="5_yrwdi"]
+[ext_resource type="AudioStream" uid="uid://1s4nsgr3bo52" path="res://assets/audio/sfx/yes.wav" id="6_ytyn3"]
+[ext_resource type="AudioStream" uid="uid://bstiv0iku16fa" path="res://assets/audio/sfx/congrats.wav" id="7_ppgmw"]
 [ext_resource type="AudioStream" uid="uid://842x4k4pka38" path="res://assets/audio/sfx/jump_1.mp3" id="10_1mgig"]
 [ext_resource type="AudioStream" uid="uid://crng8bsixd14f" path="res://assets/audio/sfx/jump_2.mp3" id="11_8gy5a"]
 [ext_resource type="AudioStream" uid="uid://dk6ae1x6cdayf" path="res://assets/audio/sfx/jump_3.mp3" id="12_axugo"]
 [ext_resource type="AudioStream" uid="uid://dhkw4ijpifhp6" path="res://assets/audio/sfx/jump_4.mp3" id="13_pfbvr"]
 [ext_resource type="AudioStream" uid="uid://ca50pnq5dgdgy" path="res://assets/audio/music/0005.wav" id="13_ppsph"]
 [ext_resource type="Texture2D" uid="uid://boxuwu5bh6cuo" path="res://assets/images/sprites/pumpkin.png" id="15_3vwkh"]
+[ext_resource type="AudioStream" uid="uid://l5stvca5alrx" path="res://assets/audio/sfx/pumpkin.wav" id="19_4vbtp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6p7uu"]
 texture = ExtResource("2_72y4e")
@@ -465,6 +469,7 @@ height = 24.0
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_fd623")
 music_tracks = Array[AudioStreamWAV]([ExtResource("2_u5oau"), ExtResource("13_ppsph"), ExtResource("5_yrwdi")])
+congratulations_tracks = Array[AudioStreamWAV]([ExtResource("5_28kgx"), ExtResource("6_ytyn3"), ExtResource("7_ppgmw")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -540,8 +545,39 @@ drag_vertical_enabled = true
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -20.0
 
+[node name="CongratulationsText" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 40.0
+offset_top = -888.0
+offset_right = 174.0
+offset_bottom = -856.0
+theme_override_fonts/normal_font = ExtResource("1_hrp24")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[right]You got the pumpkin!"
+
+[node name="ResultText" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 40.0
+offset_top = -870.0
+offset_right = 174.0
+offset_bottom = -838.0
+theme_override_fonts/normal_font = ExtResource("1_hrp24")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[right]0.00 seconds"
+
+[node name="CongratulationsPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="EndPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_4vbtp")
+
+[node name="EndPlayerTimer" type="Timer" parent="EndPlayer"]
+wait_time = 10.0
+one_shot = true
 
 [connection signal="body_entered" from="Door1" to="." method="_on_door_1_body_entered"]
 [connection signal="body_entered" from="Door2" to="." method="_on_door_2_body_entered"]
 [connection signal="body_entered" from="Goal" to="." method="_on_goal_body_entered"]
 [connection signal="finished" from="MusicPlayer" to="." method="_on_music_finished"]
+[connection signal="timeout" from="EndPlayer/EndPlayerTimer" to="." method="_on_end_player_timer_timeout"]

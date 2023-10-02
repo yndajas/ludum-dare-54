@@ -1,20 +1,22 @@
 extends Node2D
 
 @export var music_tracks: Array[AudioStreamWAV]
-var stream: AudioStreamWAV
-var time_elapsed: float = 0.0
+@export var congratulations_tracks: Array[AudioStreamWAV]
 var goal_reached: bool = false
+var music_stream: AudioStreamWAV
+var time_elapsed: float = 0.0
+var time_elapsed_rounded_string: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	stream = music_tracks[0]
+	music_stream = music_tracks[0]
 	loop_music()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if !goal_reached:
 		time_elapsed += delta
-		var time_elapsed_rounded_string: String = "%.2f" % time_elapsed
+		time_elapsed_rounded_string = "%.2f" % time_elapsed
 		$CanvasLayer/Time.text = "[center]" + time_elapsed_rounded_string
 
 func _input(event: InputEvent) -> void:
@@ -40,15 +42,38 @@ func _on_door_2_body_entered(body: Node2D) -> void:
 func _on_goal_body_entered(body: Node2D) -> void:
 	if body == $Player:
 		goal_reached = true
+		wrap_up()
 
 func _on_music_finished() -> void:
-	loop_music()
+	if !goal_reached:
+		loop_music()
+
+func _on_end_player_timer_timeout() -> void:
+	$EndPlayer.play()
 
 func loop_music() -> void:
-	$MusicPlayer.stream = stream
+	$MusicPlayer.stream = music_stream
 	$MusicPlayer.stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
 	$MusicPlayer.play()
 
 func queue_track_change(new_track: AudioStreamWAV) -> void:
-	stream = new_track
+	music_stream = new_track
 	$MusicPlayer.stream.loop_mode = AudioStreamWAV.LOOP_DISABLED
+
+func wrap_up() -> void:
+	$MusicPlayer.stream.loop_mode = AudioStreamWAV.LOOP_DISABLED
+
+	if time_elapsed <= 30:
+		$CongratulationsPlayer.stream = congratulations_tracks[0]
+	elif time_elapsed <= 40:
+		$CongratulationsPlayer.stream = congratulations_tracks[1]
+	else:
+		$CongratulationsPlayer.stream = congratulations_tracks[2]
+
+	$CongratulationsPlayer.play()
+	$EndPlayer/EndPlayerTimer.start()
+	
+	$CongratulationsText.show()
+	$ResultText.text = "[right]" + time_elapsed_rounded_string + " seconds"
+	$ResultText.show()
+	$CanvasLayer/Time.hide()

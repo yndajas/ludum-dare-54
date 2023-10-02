@@ -1,8 +1,5 @@
 # To do
 
-- Report time at end of level
-- Level end sound effect
-
 ## Stretch goals
 
 - Redesign the sprites (make them nicer)
@@ -59,3 +56,5 @@
 - Stop player when goal reached
 - Change door node to Sprite2D
 - Stop timer when you reach the end of the level
+- Report time at end of level
+- Level end sound effect
