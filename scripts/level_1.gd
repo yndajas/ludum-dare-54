@@ -18,12 +18,10 @@ var music_stream: AudioStreamWAV
 var time_elapsed: float = 0.0
 var time_elapsed_rounded_string: String
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	music_stream = music_tracks[0]
 	loop_music()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if !goal_reached:
 		time_elapsed += delta

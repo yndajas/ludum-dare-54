@@ -13,7 +13,6 @@ extends Node2D
 var exit_initiated: bool = false
 var sounds: Dictionary
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sounds = {
 		"goodbye": goodbye_sounds,
@@ -27,7 +26,6 @@ func _ready() -> void:
 		toggle_full_screen_button.hide()
 		quit_button.hide()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
