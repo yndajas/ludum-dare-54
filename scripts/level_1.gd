@@ -37,12 +37,12 @@ func _on_door_2_body_entered(body: Node2D) -> void:
 		$Player.position = Vector2(464, -448)
 		queue_track_change(music_tracks[2])
 
-func _on_music_finished() -> void:
-	loop_music()
-
 func _on_goal_body_entered(body: Node2D) -> void:
 	if body == $Player:
 		goal_reached = true
+
+func _on_music_finished() -> void:
+	loop_music()
 
 func loop_music() -> void:
 	$MusicPlayer.stream = stream
