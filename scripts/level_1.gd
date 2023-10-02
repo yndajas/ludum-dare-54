@@ -3,6 +3,7 @@ extends Node2D
 @export var music_tracks: Array[AudioStreamWAV]
 var stream: AudioStreamWAV
 var time_elapsed: float = 0.0
+var goal_reached: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -37,6 +38,10 @@ func _on_door_2_body_entered(body: Node2D) -> void:
 
 func _on_music_finished() -> void:
 	loop_music()
+
+func _on_goal_body_entered(body: Node2D) -> void:
+	if body == $Player:
+		goal_reached = true
 
 func loop_music() -> void:
 	$MusicPlayer.stream = stream
