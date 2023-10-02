@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://275i0f2dku1u"]
+[gd_scene load_steps=33 format=3 uid="uid://275i0f2dku1u"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_fd623"]
 [ext_resource type="FontFile" uid="uid://b8wld6j0s08ch" path="res://assets/fonts/PixelOperator8.ttf" id="1_hrp24"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://xdhnq3rntya3" path="res://assets/audio/music/0001.wav" id="2_u5oau"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="3_bjlrj"]
 [ext_resource type="AudioStream" uid="uid://m03m8ovxbtdd" path="res://assets/audio/sfx/vamos.wav" id="5_28kgx"]
+[ext_resource type="AudioStream" uid="uid://b4bx6hp1k6dv1" path="res://assets/audio/music/0056.wav" id="5_ty0oh"]
 [ext_resource type="PackedScene" uid="uid://0r3qxg1aorwv" path="res://scenes/door.tscn" id="5_ubr64"]
 [ext_resource type="AudioStream" uid="uid://ddc530o7v6dx8" path="res://assets/audio/music/0008.wav" id="5_yrwdi"]
 [ext_resource type="AudioStream" uid="uid://1s4nsgr3bo52" path="res://assets/audio/sfx/yes.wav" id="6_ytyn3"]
@@ -476,7 +477,7 @@ height = 24.0
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_fd623")
-music_tracks = Array[AudioStreamWAV]([ExtResource("2_u5oau"), ExtResource("13_ppsph"), ExtResource("5_yrwdi")])
+music_tracks = Array[AudioStreamWAV]([ExtResource("2_u5oau"), ExtResource("13_ppsph"), ExtResource("5_yrwdi"), ExtResource("5_ty0oh")])
 congratulations_tracks = Array[AudioStreamWAV]([ExtResource("5_28kgx"), ExtResource("6_ytyn3"), ExtResource("7_ppgmw")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

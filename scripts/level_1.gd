@@ -40,7 +40,7 @@ func _on_door_2_body_entered(body: Node2D) -> void:
 		queue_track_change(music_tracks[2])
 
 func _on_goal_body_entered(body: Node2D) -> void:
-	if body == $Player:
+	if !goal_reached && body == $Player:
 		goal_reached = true
 		wrap_up()
 
@@ -61,7 +61,8 @@ func queue_track_change(new_track: AudioStreamWAV) -> void:
 	$MusicPlayer.stream.loop_mode = AudioStreamWAV.LOOP_DISABLED
 
 func wrap_up() -> void:
-	$MusicPlayer.stream.loop_mode = AudioStreamWAV.LOOP_DISABLED
+	queue_track_change(music_tracks[3])
+	loop_music()
 
 	if time_elapsed <= 30:
 		$CongratulationsPlayer.stream = congratulations_tracks[0]

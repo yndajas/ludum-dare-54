@@ -27,4 +27,6 @@ See [LICENCES.md](./LICENCES.md)
 
 [Preparatory learning](https://www.youtube.com/watch?v=FNEAJsry5sA): Brett Chalupa (@brettchalupa)
 
+Music track '0056' motifs: Marvin Gaye ('Sexual Healing') and The Notorious B.I.G. ('Party and Bullshit')
+
 The rest: Ynda Jas (they/them, @yndajas)
