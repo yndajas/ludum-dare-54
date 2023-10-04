@@ -15,6 +15,11 @@ First game I've made from scratch, made for [Ludum Dare 54](https://ldjam.com/ev
 
 \* based on QWERTY layout - letter-based keys may differ on different keyboard layouts
 
+## Playthroughs
+
+- [Me](https://www.youtube.com/watch?v=ksyu-O_vl2w)
+- [Ategon](https://www.youtube.com/watch?v=09NnjP74yFU&t=2945s) (from 49:05)
+
 ## Licenses
 
 See [LICENCES.md](./LICENCES.md)
